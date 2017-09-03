@@ -1,0 +1,23 @@
+@import '../../library/styles/variables.scss';
+@import '../../library/styles/mixins.scss';
+.App {
+    color: $red;
+    & .App-header {
+        color: $blue;
+        @include border-radius(10px);
+        background-color: $yellow;
+    }
+    @media #{$tablet} {
+        & .App-header {
+            color: $green;
+        }
+    }
+    @media #{$desktop} {
+        & .App-header {
+            color: $red;
+        }
+    }
+    & .App-intro {
+        color: $blue;
+    }
+}
