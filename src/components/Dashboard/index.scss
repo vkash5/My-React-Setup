@@ -1,0 +1,39 @@
+@import '../../library/styles/variables.scss';
+@import '../../library/styles/mixins.scss';
+.dashboard {
+    color: $green;
+    width: 100%;
+    background-color: orange;
+    & .content {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    & .item {
+        display: inline-block;
+        width: calc(80% - 20px);
+        height: 200px;
+        margin-right: 20px;
+        color: $red;
+        @include border-radius(10px);
+        background-color: $yellow;
+        padding: 10px;
+        margin-bottom: 20px;
+    }
+    @media #{$tablet} {
+        & .item {
+            width: calc(50% - 40px);
+        }
+    }
+    @media #{$desktop} {
+        & .item {
+            width: calc(33% - 60px);
+        }
+    }
+    & .header {
+        color: $red;
+    }
+    & .description {
+        color: $green;
+    }
+}
