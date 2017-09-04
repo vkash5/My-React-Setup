@@ -1,5 +1,3 @@
-'use strict';
-
 const defaults = {
     mode: 'cors',
     cache: 'default',
@@ -7,7 +5,6 @@ const defaults = {
 };
 
 // * Export a standard `fetch` method containing necessary global options
-// *
 // * @module FetchData
 // * @param {String} url Path to supply to `fetch` method
 // * @param {String} [opts] Optional parameters to supply or override default options. Default value is {}

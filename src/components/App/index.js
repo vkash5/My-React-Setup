@@ -3,6 +3,7 @@ import { Grid, Row, Col, Navbar, Jumbotron, Button } from 'react-bootstrap';
 import './index.css';
 import Dashboard from '../Dashboard';
 import fetchData from '../../library/js/fetchData';
+import pubsub from 'pubsub-js';
 
 class App extends Component {
 	constructor(props) {
@@ -20,7 +21,9 @@ class App extends Component {
 			.then(response => {
 				this.setState({
 					itemList: response.items
-				}, ()=>console.log(this.state.itemList))
+				}, ()=>{
+					pubsub.publish('topicName',response);
+				})
 			});
 
 	}
@@ -76,8 +79,8 @@ class App extends Component {
 					<Grid>
 						<Row className="show-grid">
 							{this.state.itemList.map((item, index) =>
-								<Col xs={12} sm={6} md={4} lg={3} >
-									<div key={index.toString()} className="btn-col">
+								<Col key={index.toString()} xs={12} sm={6} md={4} lg={3} >
+									<div className="btn-col">
 										<h3 className='header'>
 											{item.html_url}
 										</h3>
