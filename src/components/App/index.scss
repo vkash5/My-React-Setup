@@ -9,6 +9,7 @@
         border: 1px solid green;
         @include border-radius(10px,0);
         @include box-shadow(0.5);
+        @include ellipsis();
         min-height: 200px;
     }
 }
