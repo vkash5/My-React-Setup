@@ -4,8 +4,8 @@
     border-radius: $radiusX $radiusY;
 }
 // Box Shadow
-@mixin box-shadow ($dark){
-    box-shadow: 0 1px 35px rgba(0, 0, 0, $dark);
+@mixin box-shadow ($dark: 0.6){
+    box-shadow: 0 1px 1px 0 rgba(159,167,194, $dark);
 }
 // Ellipsis
 @mixin ellipsis (){

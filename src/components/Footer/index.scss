@@ -1,0 +1,9 @@
+@import '../../library/styles/variables.scss';
+@import '../../library/styles/mixins.scss';
+.footer {
+    width: 100%;
+    height: 30px;
+    color: white;
+    background-color: rgba(50, 43, 84, 1);
+    text-align: center;
+}

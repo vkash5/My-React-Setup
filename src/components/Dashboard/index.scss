@@ -3,37 +3,18 @@
 .dashboard {
     color: $green;
     width: 100%;
-    background-color: orange;
-    & .content {
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-    }
-    & .item {
-        display: inline-block;
-        width: calc(80% - 20px);
-        height: 200px;
-        margin-right: 20px;
-        color: $red;
-        @include border-radius(10px,10px);
-        background-color: $yellow;
-        padding: 10px;
+    margin-top: 20px;
+    background: url('../../assets/images/Website-Background.png') repeat;
+    background-color: rgb(243, 243, 243);
+    & .btn-col {
         margin-bottom: 20px;
-    }
-    @media #{$tablet} {
-        & .item {
-            width: calc(50% - 40px);
-        }
-    }
-    @media #{$desktop} {
-        & .item {
-            width: calc(33% - 60px);
-        }
-    }
-    & .header {
-        color: $red;
-    }
-    & .description {
-        color: $green;
+        text-align: center;
+        background: rgba(226, 226, 226, 0.78);
+        @include border-radius(10px,0);
+        @include box-shadow(0.6);
+        min-height: 400px;
+        padding: 20px;
+        width: 100%;
+        word-wrap: break-word;
     }
 }

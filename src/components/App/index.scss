@@ -1,15 +1,5 @@
 @import '../../library/styles/variables.scss';
 @import '../../library/styles/mixins.scss';
 .app-wrapper {
-    background-color: $red;
-    height: 800px;
-    & .btn-col {
-        margin-bottom: 20px;
-        text-align: center;
-        border: 1px solid green;
-        @include border-radius(10px,0);
-        @include box-shadow(0.5);
-        @include ellipsis();
-        min-height: 200px;
-    }
+    background-color: rgb(243, 243, 243);
 }
